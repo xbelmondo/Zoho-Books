@@ -3,7 +3,7 @@
 
 This package is an upgrade of [**official package**][2]
 
-#### Most important feature is switch old auth  to Oauth
+#### Most important feature is switch from old auth  to Oauth
 ### Install
 
     composer require ahmedd-ibrahim/zohobooks
