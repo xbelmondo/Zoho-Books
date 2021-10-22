@@ -1,16 +1,12 @@
 # ZohoBooks API - PHP SDK library
 [**ZohoBooks**][1] PHP library
 
-[![Build Status](https://travis-ci.org/Ahmedd/zohobooks-api.svg)](https://travis-ci.org/Ahmedd/zohobooks-api)
-[![Latest Stable Version](https://poser.pugx.org/Ahmedd/zohobooks-api/v/stable)](https://packagist.org/packages/Ahmedd/zohobooks-api)
-[![Latest Unstable Version](https://poser.pugx.org/Ahmedd/zohobooks-api/v/unstable)](https://packagist.org/packages/Ahmedd/zohobooks-api)
-[![codecov](https://codecov.io/gh/Ahmedd/zohobooks-api/branch/master/graph/badge.svg)](https://codecov.io/gh/Ahmedd/zohobooks-api)
-[![Code Climate](https://codeclimate.com/github/Ahmedd/zohobooks-api/badges/gpa.svg)](https://codeclimate.com/github/Ahmedd/zohobooks-api)
-[![Dependency Status](https://www.versioneye.com/user/projects/587ff002452b830031360b13/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/587ff002452b830031360b13)
+This package is an upgrade of [**official package**][2]
 
+#### Most important feature is switch old auth  to Oauth
 ### Install
 
-    composer require Ahmedd/zohobooks-api:^0.1@dev
+    composer require ahmedd-ibrahim/zohobooks
 
 ## TODO
 
@@ -24,3 +20,4 @@
 - [ ] Integrations with popular frameworks
 
 [1]: https://www.zoho.com/books/
+[2]: https://github.com/opsway/zohobooks-api
