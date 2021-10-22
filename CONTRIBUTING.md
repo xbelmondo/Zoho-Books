@@ -2,8 +2,8 @@
 
 ## RESOURCES
 
-- [Wiki](https://github.com/opsway/zohobooks-api/wiki)
-- [Issues](https://github.com/opsway/zohobooks-api/issues)
+- [Wiki](https://github.com/Ahmedd/zohobooks-api/wiki)
+- [Issues](https://github.com/Ahmedd/zohobooks-api/issues)
 
 ## RUNNING TESTS
 

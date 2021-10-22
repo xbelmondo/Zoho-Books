@@ -1,10 +1,10 @@
 <?php
 
-namespace OpsWay\ZohoBooks\Factory;
+namespace Ahmedd\ZohoBooks\Factory;
 
 use Interop\Container\ContainerInterface;
 use Interop\Container\Exception\ContainerException;
-use OpsWay\ZohoBooks\Api;
+use Ahmedd\ZohoBooks\Api;
 use Zend\ServiceManager\Exception\ServiceNotCreatedException;
 use Zend\ServiceManager\Exception\ServiceNotFoundException;
 use Zend\ServiceManager\Factory\FactoryInterface;

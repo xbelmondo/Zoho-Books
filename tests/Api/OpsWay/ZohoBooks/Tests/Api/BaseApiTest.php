@@ -1,9 +1,9 @@
 <?php
 
-namespace OpsWay\ZohoBooks\Tests\Api;
+namespace Ahmedd\ZohoBooks\Tests\Api;
 
-use OpsWay\ZohoBooks\Api\BaseApi;
-use OpsWay\ZohoBooks\Client;
+use Ahmedd\ZohoBooks\Api\BaseApi;
+use Ahmedd\ZohoBooks\Client;
 use GuzzleHttp\Client as BaseClient;
 use GuzzleHttp\ClientInterface;
 use PHPUnit\Framework\TestCase;

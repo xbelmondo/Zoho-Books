@@ -15,7 +15,7 @@
         <ini name="error_reporting" value="-1" />
     </php>
     <testsuites>
-        <testsuite name="opsway/zohobooks-api Test Suite">
+        <testsuite name="Ahmedd/zohobooks-api Test Suite">
             <directory>tests</directory>
         </testsuite>
     </testsuites>

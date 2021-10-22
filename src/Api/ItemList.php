@@ -1,6 +1,6 @@
 <?php
 
-namespace OpsWay\ZohoBooks\Api;
+namespace Ahmedd\ZohoBooks\Api;
 
 /**
  * This class is required in order to add pagination support to zoho books list endpoints

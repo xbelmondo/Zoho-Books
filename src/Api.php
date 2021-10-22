@@ -1,6 +1,6 @@
 <?php
 
-namespace OpsWay\ZohoBooks;
+namespace Ahmedd\ZohoBooks;
 
 class Api
 {
@@ -88,7 +88,7 @@ class Api
     /**
      * @param string|null $organizationId
      *
-     * @return \OpsWay\ZohoBooks\Api\Contacts
+     * @return \Ahmedd\ZohoBooks\Api\Contacts
      */
     public function contacts($organizationId = null)
     {
@@ -98,7 +98,7 @@ class Api
     /**
      * @param string|null $organizationId
      *
-     * @return \OpsWay\ZohoBooks\Api\Estimates
+     * @return \Ahmedd\ZohoBooks\Api\Estimates
      */
     public function estimates($organizationId = null)
     {
@@ -108,7 +108,7 @@ class Api
     /**
      * @param string|null $organizationId
      *
-     * @return \OpsWay\ZohoBooks\Api\Bills
+     * @return \Ahmedd\ZohoBooks\Api\Bills
      */
     public function bills($organizationId = null)
     {
@@ -118,7 +118,7 @@ class Api
     /**
      * @param string|null $organizationId
      *
-     * @return \OpsWay\ZohoBooks\Api\BankAccounts
+     * @return \Ahmedd\ZohoBooks\Api\BankAccounts
      */
     public function bankAccounts($organizationId = null)
     {
@@ -128,7 +128,7 @@ class Api
     /**
      * @param string|null $organizationId
      *
-     * @return \OpsWay\ZohoBooks\Api\BankRules
+     * @return \Ahmedd\ZohoBooks\Api\BankRules
      */
     public function bankRules($organizationId = null)
     {
@@ -138,7 +138,7 @@ class Api
     /**
      * @param string|null $organizationId
      *
-     * @return \OpsWay\ZohoBooks\Api\BankTransactions
+     * @return \Ahmedd\ZohoBooks\Api\BankTransactions
      */
     public function bankTransactions($organizationId = null)
     {
@@ -148,7 +148,7 @@ class Api
     /**
      * @param string|null $organizationId
      *
-     * @return \OpsWay\ZohoBooks\Api\BaseCurrencyAdjustment
+     * @return \Ahmedd\ZohoBooks\Api\BaseCurrencyAdjustment
      */
     public function baseCurrencyAdjustment($organizationId = null)
     {
@@ -158,7 +158,7 @@ class Api
     /**
      * @param string|null $organizationId
      *
-     * @return \OpsWay\ZohoBooks\Api\ChartOfAccounts
+     * @return \Ahmedd\ZohoBooks\Api\ChartOfAccounts
      */
     public function chartOfAccounts($organizationId = null)
     {
@@ -168,7 +168,7 @@ class Api
     /**
      * @param string|null $organizationId
      *
-     * @return \OpsWay\ZohoBooks\Api\CreditNotes
+     * @return \Ahmedd\ZohoBooks\Api\CreditNotes
      */
     public function creditNotes($organizationId = null)
     {
@@ -178,7 +178,7 @@ class Api
     /**
      * @param string|null $organizationId
      *
-     * @return \OpsWay\ZohoBooks\Api\CustomerPayments
+     * @return \Ahmedd\ZohoBooks\Api\CustomerPayments
      */
     public function customerPayments($organizationId = null)
     {
@@ -188,7 +188,7 @@ class Api
     /**
      * @param string|null $organizationId
      *
-     * @return \OpsWay\ZohoBooks\Api\Expenses
+     * @return \Ahmedd\ZohoBooks\Api\Expenses
      */
     public function expenses($organizationId = null)
     {
@@ -198,7 +198,7 @@ class Api
     /**
      * @param string|null $organizationId
      *
-     * @return \OpsWay\ZohoBooks\Api\Invoices
+     * @return \Ahmedd\ZohoBooks\Api\Invoices
      */
     public function invoices($organizationId = null)
     {
@@ -208,7 +208,7 @@ class Api
     /**
      * @param string|null $organizationId
      *
-     * @return \OpsWay\ZohoBooks\Api\Journals
+     * @return \Ahmedd\ZohoBooks\Api\Journals
      */
     public function journals($organizationId = null)
     {
@@ -218,7 +218,7 @@ class Api
     /**
      * @param string|null $organizationId
      *
-     * @return \OpsWay\ZohoBooks\Api\Projects
+     * @return \Ahmedd\ZohoBooks\Api\Projects
      */
     public function projects($organizationId = null)
     {
@@ -228,7 +228,7 @@ class Api
     /**
      * @param string|null $organizationId
      *
-     * @return \OpsWay\ZohoBooks\Api\PurchaseOrder
+     * @return \Ahmedd\ZohoBooks\Api\PurchaseOrder
      */
     public function purchaseOrder($organizationId = null)
     {
@@ -238,7 +238,7 @@ class Api
     /**
      * @param string|null $organizationId
      *
-     * @return \OpsWay\ZohoBooks\Api\RecurringExpenses
+     * @return \Ahmedd\ZohoBooks\Api\RecurringExpenses
      */
     public function recurringExpenses($organizationId = null)
     {
@@ -248,7 +248,7 @@ class Api
     /**
      * @param string|null $organizationId
      *
-     * @return \OpsWay\ZohoBooks\Api\RecurringInvoices
+     * @return \Ahmedd\ZohoBooks\Api\RecurringInvoices
      */
     public function recurringInvoices($organizationId = null)
     {
@@ -258,7 +258,7 @@ class Api
     /**
      * @param string|null $organizationId
      *
-     * @return \OpsWay\ZohoBooks\Api\SalesOrder
+     * @return \Ahmedd\ZohoBooks\Api\SalesOrder
      */
     public function salesOrder($organizationId = null)
     {
@@ -268,7 +268,7 @@ class Api
     /**
      * @param string|null $organizationId
      *
-     * @return \OpsWay\ZohoBooks\Api\Settings
+     * @return \Ahmedd\ZohoBooks\Api\Settings
      */
     public function settings($organizationId = null)
     {
@@ -278,7 +278,7 @@ class Api
     /**
      * @param string|null $organizationId
      *
-     * @return \OpsWay\ZohoBooks\Api\VendorCredits
+     * @return \Ahmedd\ZohoBooks\Api\VendorCredits
      */
     public function vendorCredits($organizationId = null)
     {
@@ -288,7 +288,7 @@ class Api
     /**
      * @param string|null $organizationId
      *
-     * @return \OpsWay\ZohoBooks\Api\VendorPayments
+     * @return \Ahmedd\ZohoBooks\Api\VendorPayments
      */
     public function vendorPayments($organizationId = null)
     {
@@ -298,7 +298,7 @@ class Api
     /**
      * @param string|null $organizationId
      *
-     * @return \OpsWay\ZohoBooks\Api\Items
+     * @return \Ahmedd\ZohoBooks\Api\Items
      */
     public function items($organizationId = null)
     {

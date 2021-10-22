@@ -1,6 +1,6 @@
 <?php
 
-namespace OpsWay\ZohoBooks;
+namespace Ahmedd\ZohoBooks;
 
 return [
     'service_manager' => [

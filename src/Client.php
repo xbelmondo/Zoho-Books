@@ -1,6 +1,6 @@
 <?php
 
-namespace OpsWay\ZohoBooks;
+namespace Ahmedd\ZohoBooks;
 
 use GuzzleHttp\Client as BaseClient;
 use GuzzleHttp\ClientInterface;

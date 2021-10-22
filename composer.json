@@ -1,5 +1,5 @@
 {
-    "name": "opsway/zohobooks-api",
+    "name": "ahmedd-ibrahim/zohobooks",
     "description": "PHP SDK for ZohoBooks API",
     "license": "MIT",
     "keywords": [
@@ -9,7 +9,7 @@
         "library"
     ],
     "support": {
-        "issues": "https://github.com/opsway/zohobooks-api/issues"
+        "issues": "https://github.com/Ahmedd-Ibrahim/Zoho-Books/issues"
     },
     "prefer-stable": true,
     "require": {
@@ -22,11 +22,11 @@
     },
     "autoload": {
         "psr-4": {
-            "OpsWay\\ZohoBooks\\": "src/"
+            "Ahmedd\\ZohoBooks\\": "src/"
         }
     },
     "autoload-dev": {
-        "psr-4": { "OpsWay\\ZohoBooks\\Tests\\": "tests/" }
+        "psr-4": { "Ahmedd\\ZohoBooks\\Tests\\": "tests/" }
     },
     "extra": {
         "branch-alias": {

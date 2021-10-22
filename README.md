@@ -1,16 +1,16 @@
 # ZohoBooks API - PHP SDK library
 [**ZohoBooks**][1] PHP library
 
-[![Build Status](https://travis-ci.org/opsway/zohobooks-api.svg)](https://travis-ci.org/opsway/zohobooks-api)
-[![Latest Stable Version](https://poser.pugx.org/opsway/zohobooks-api/v/stable)](https://packagist.org/packages/opsway/zohobooks-api)
-[![Latest Unstable Version](https://poser.pugx.org/opsway/zohobooks-api/v/unstable)](https://packagist.org/packages/opsway/zohobooks-api)
-[![codecov](https://codecov.io/gh/opsway/zohobooks-api/branch/master/graph/badge.svg)](https://codecov.io/gh/opsway/zohobooks-api)
-[![Code Climate](https://codeclimate.com/github/opsway/zohobooks-api/badges/gpa.svg)](https://codeclimate.com/github/opsway/zohobooks-api)
+[![Build Status](https://travis-ci.org/Ahmedd/zohobooks-api.svg)](https://travis-ci.org/Ahmedd/zohobooks-api)
+[![Latest Stable Version](https://poser.pugx.org/Ahmedd/zohobooks-api/v/stable)](https://packagist.org/packages/Ahmedd/zohobooks-api)
+[![Latest Unstable Version](https://poser.pugx.org/Ahmedd/zohobooks-api/v/unstable)](https://packagist.org/packages/Ahmedd/zohobooks-api)
+[![codecov](https://codecov.io/gh/Ahmedd/zohobooks-api/branch/master/graph/badge.svg)](https://codecov.io/gh/Ahmedd/zohobooks-api)
+[![Code Climate](https://codeclimate.com/github/Ahmedd/zohobooks-api/badges/gpa.svg)](https://codeclimate.com/github/Ahmedd/zohobooks-api)
 [![Dependency Status](https://www.versioneye.com/user/projects/587ff002452b830031360b13/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/587ff002452b830031360b13)
 
 ### Install
 
-    composer require opsway/zohobooks-api:^0.1@dev
+    composer require Ahmedd/zohobooks-api:^0.1@dev
 
 ## TODO
 

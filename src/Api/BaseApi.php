@@ -1,9 +1,9 @@
 <?php
 
-namespace OpsWay\ZohoBooks\Api;
+namespace Ahmedd\ZohoBooks\Api;
 
 use GuzzleHttp\Psr7\Stream;
-use OpsWay\ZohoBooks\Client;
+use Ahmedd\ZohoBooks\Client;
 
 class BaseApi
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace OpsWay\ZohoBooks\Api;
+namespace Ahmedd\ZohoBooks\Api;
 
 class Estimates extends BaseApi
 {
