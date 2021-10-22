@@ -1,0 +1,10 @@
+.idea/
+### PHP CS Fixer
+.php_cs
+
+### Composer template
+/composer.lock
+/vendor/
+
+# User-specific stuff:
+# see https://help.github.com/articles/ignoring-files/#create-a-global-gitignore

@@ -1,0 +1,25 @@
+sudo: false
+language: php
+
+matrix:
+    include:
+        - php: 5.6
+        - php: 7.0
+        - php: 7.1
+    fast_finish: true
+    allow_failures:
+        - php: nightly
+
+before_script:
+  - composer install
+
+script:
+  - composer cs-check
+  - composer test-cover
+
+after_script:
+  - bash <(curl -s https://codecov.io/bash) -t e4de22ca-5f85-40e5-8f90-4c633cc4df9b
+
+cache:
+  directories:
+    - $HOME/.composer/cache
