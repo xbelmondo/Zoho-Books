@@ -9,7 +9,7 @@ use Psr\Http\Message\ResponseInterface;
 
 class Client
 {
-    const ENDPOINT = 'https://www.zohoapis.com/books/v3/';
+    const ENDPOINT = 'https://www.zohoapis.eu/books/v3/';
 
     /**
      * @var BaseClient

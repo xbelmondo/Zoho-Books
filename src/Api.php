@@ -2,8 +2,14 @@
 
 namespace Ahmedd\ZohoBooks;
 
+use Ahmedd\ZohoBooks\TokenManager;
+
 class Api
 {
+    /**
+     * @var string
+     */
+    protected $tokenManager;
     /**
      * @var string
      */
@@ -31,14 +37,15 @@ class Api
      * @param string $emailOrToken
      * @param null $password
      */
-    public function __construct($emailOrToken, $password = null)
+    public function __construct($authTokenOrManager)
     {
-        if (null === $password) {
-            $this->authToken = $emailOrToken;
-        } else {
-            $this->email = $emailOrToken;
-            $this->password = $password;
-        }
+
+      if ($authTokenOrManager instanceof TokenManager) {
+          $this->tokenManager = $authTokenOrManager;
+          $this->authToken = $this->tokenManager->getAccessToken();
+      } else {
+          $this->authToken = $authTokenOrManager;
+      }
     }
 
     /**
@@ -47,7 +54,7 @@ class Api
     public function getClient()
     {
         if (null === $this->client) {
-            $this->setClient(new Client($this->authToken, $this->email, $this->password));
+            $this->setClient(new Client($this->authToken));
         }
 
         return $this->client;
