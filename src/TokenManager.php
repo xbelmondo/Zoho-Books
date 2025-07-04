@@ -11,14 +11,50 @@ class TokenManager
     protected $clientSecret;
     protected $refreshToken;
     protected $tokenPath;
-    protected $accountsDomain;
+    protected $region;
 
-    public function __construct($clientId, $clientSecret, $refreshToken, $tokenPath = null, $accountsDomain = 'https://accounts.zoho.eu')
+    protected $regions = array(
+        'us' => array(
+            'accounts' => 'https://accounts.zoho.com',
+            'api'      => 'https://www.zohoapis.com/books/v3/'
+        ),
+        'eu' => array(
+            'accounts' => 'https://accounts.zoho.eu',
+            'api'      => 'https://www.zohoapis.eu/books/v3/'
+        ),
+        'in' => array(
+            'accounts' => 'https://accounts.zoho.in',
+            'api'      => 'https://www.zohoapis.in/books/v3/'
+        ),
+        'au' => array(
+            'accounts' => 'https://accounts.zoho.com.au',
+            'api'      => 'https://www.zohoapis.com.au/books/v3/'
+        ),
+        'jp' => array(
+            'accounts' => 'https://accounts.zoho.jp',
+            'api'      => 'https://www.zohoapis.jp/books/v3/'
+        ),
+        'ca' => array(
+            'accounts' => 'https://accounts.zoho.ca',
+            'api'      => 'https://www.zohoapis.ca/books/v3/'
+        ),
+        'cn' => array(
+            'accounts' => 'https://accounts.zoho.com.cn',
+            'api'      => 'https://www.zohoapis.com.cn/books/v3/'
+        ),
+        'sa' => array(
+            'accounts' => 'https://accounts.zoho.sa',
+            'api'      => 'https://www.zohoapis.sa/books/v3/'
+        )
+    );
+
+    public function __construct($clientId, $clientSecret, $refreshToken, $tokenPath = null, $region = 'us')
     {
-        $this->clientId       = $clientId;
-        $this->clientSecret   = $clientSecret;
-        $this->refreshToken   = $refreshToken;
-        $this->accountsDomain = rtrim($accountsDomain, '/');
+        $this->clientId     = $clientId;
+        $this->clientSecret = $clientSecret;
+        $this->refreshToken = $refreshToken;
+
+        $this->region = isset($this->regions[$region]) ? $region : 'us';
 
         if ($tokenPath === null && function_exists('storage_path')) {
             $appPath = storage_path('app');
@@ -32,7 +68,7 @@ class TokenManager
     }
 
     /**
-     * Get access token, refreshing if expired.
+     * Get valid access token, refresh if expired.
      *
      * @return string
      * @throws \Exception
@@ -49,7 +85,7 @@ class TokenManager
     }
 
     /**
-     * Refresh Zoho access token and store it with expires_at.
+     * Refresh token from Zoho OAuth server.
      *
      * @return string
      * @throws \Exception
@@ -58,8 +94,10 @@ class TokenManager
     {
         $client = new Client();
 
+        $url = $this->regions[$this->region]['accounts'] . '/oauth/v2/token';
+
         try {
-            $response = $client->request('POST', $this->accountsDomain . '/oauth/v2/token', [
+            $response = $client->request('POST', $url, array(
                 'form_params' => array(
                     'refresh_token' => $this->refreshToken,
                     'client_id'     => $this->clientId,
@@ -67,19 +105,17 @@ class TokenManager
                     'grant_type'    => 'refresh_token',
                 ),
                 'timeout' => 10,
-            ]);
+            ));
 
             $body = $response->getBody()->getContents();
             $data = json_decode($body, true);
 
             if (!isset($data['access_token'])) {
-                throw new \Exception('Token response did not contain access_token. Response: ' . $body);
+                throw new \Exception('Zoho token response missing access_token. Response: ' . $body);
             }
 
-            // Add expiration timestamp
             $data['expires_at'] = time() + (isset($data['expires_in']) ? intval($data['expires_in']) : 3600) - 60;
 
-            // Ensure folder exists
             $dir = dirname($this->tokenPath);
             if (!is_dir($dir)) {
                 mkdir($dir, 0775, true);
@@ -95,7 +131,17 @@ class TokenManager
     }
 
     /**
-     * Read saved token file.
+     * Get region-specific Zoho Books API base URL.
+     *
+     * @return string
+     */
+    public function getBaseApiUrl()
+    {
+        return $this->regions[$this->region]['api'];
+    }
+
+    /**
+     * Read token from disk.
      *
      * @return array
      */
@@ -112,7 +158,7 @@ class TokenManager
     }
 
     /**
-     * Check if the saved token has expired.
+     * Check token expiry.
      *
      * @param array $data
      * @return bool

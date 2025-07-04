@@ -37,15 +37,10 @@ class Api
      * @param string $emailOrToken
      * @param null $password
      */
-    public function __construct($authTokenOrManager)
+    public function __construct(TokenManager $authTokenManager)
     {
-
-      if ($authTokenOrManager instanceof TokenManager) {
-          $this->tokenManager = $authTokenOrManager;
+          $this->tokenManager = $authTokenManager;
           $this->authToken = $this->tokenManager->getAccessToken();
-      } else {
-          $this->authToken = $authTokenOrManager;
-      }
     }
 
     /**
@@ -54,7 +49,7 @@ class Api
     public function getClient()
     {
         if (null === $this->client) {
-            $this->setClient(new Client($this->authToken));
+            $this->setClient(new Client($this->tokenManager));
         }
 
         return $this->client;
