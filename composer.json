@@ -1,5 +1,8 @@
 {
-    "name": "ahmedd-ibrahim/zohobooks",
+    "name": "xbelmondo/zohobooks",
+    "replace": {
+      "ahmedd-ibrahim/zohobooks": "*"
+    },
     "description": "PHP SDK for ZohoBooks API",
     "license": "MIT",
     "keywords": [
