@@ -72,6 +72,12 @@ class Invoices extends BaseApi
 
         return true;
     }
+    public function getPDF($invoiceIds)
+    {
+        $response = $this->client->get(static::API_PATH, $this->organizationId,'pdf',['invoice_ids'=>$invoiceIds]);
+
+        return $response;
+    }
 
     /**
      * Email an invoice to the customer
@@ -83,13 +89,13 @@ class Invoices extends BaseApi
      *
      * @return bool
      */
-    public function email($invoiceId, array $data)
+    public function email($invoiceId, array $data, array $params = [])
     {
         if (!isset($data['to_mail_ids'])) {
             throw new \RuntimeException('Parameter `to_mail_ids` is required');
         }
 
-        $this->client->post(static::API_PATH.'/'.$invoiceId.'/email', $this->organizationId, $data);
+        $this->client->post(static::API_PATH.'/'.$invoiceId.'/email', $this->organizationId, $data, $params);
 
         return true;
     }
